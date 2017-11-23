@@ -45,9 +45,14 @@ class GaussianBlurPostProcessingStrategy implements PostProcessingStrategy
         $xpath->registerNamespace('svg', 'http://www.w3.org/2000/svg');
         $gElements = $xpath->query('//svg:g');
 
-        $firstGroup = $gElements->item(0);
-        $firstGroup->setAttribute('filter', 'url(#' . $this->filterId . ')');
-        $firstGroup->setAttribute('fill-opacity', '0.5');
+        if ($gElements->length > 0) {
+            $blurTarget = $gElements->item(0);
+        } else {
+            $blurTarget = $svg;
+        }
+
+        $blurTarget->setAttribute('filter', 'url(#' . $this->filterId . ')');
+        $blurTarget->setAttribute('fill-opacity', '0.5');
 
         return $dom->saveXML();
     }
