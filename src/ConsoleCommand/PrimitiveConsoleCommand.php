@@ -18,7 +18,7 @@ class PrimitiveConsoleCommand extends Command
     protected function configure()
     {
         $this->setName('lqiphp:primitive')
-            ->setDescription('Generate an LQIP using Primitive')
+            ->setDescription('Generate an LQIP SVG using Primitive and various post-processors')
             ->addArgument('inputFile', InputArgument::REQUIRED, 'Absolute path to the original image.')
             ->addOption('numberOfShapes', 'a', InputOption::VALUE_REQUIRED, 'Number of shapes to generate.', 8)
             ->addOption('mode', 'm', InputOption::VALUE_REQUIRED, 'What type of shapes to use.', 1)
