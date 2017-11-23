@@ -1,0 +1,33 @@
+{
+  "name": "2dotstwice/lqiphp",
+  "description": "",
+  "type": "library",
+  "license": "Apache-2.0",
+  "authors": [],
+  "require": {
+    "php": ">=7.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "~5.3",
+    "squizlabs/php_codesniffer": "~2.3",
+    "phing/phing": "~2.11",
+    "satooshi/php-coveralls": "~0.7"
+  },
+  "autoload": {
+    "psr-4": {
+      "TwoDotsTwice\\LQIPHP\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "TwoDotsTwice\\LQIPHP\\": "tests/"
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "extra": {
+    "branch-alias": {
+      "dev-master": "0.x-dev"
+    }
+  }
+}
