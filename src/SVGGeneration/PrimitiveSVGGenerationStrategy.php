@@ -51,8 +51,8 @@ class PrimitiveSVGGenerationStrategy implements SVGGenerationStrategy
             sprintf(
                 '%s -i %s -o %s -m %d -n %d',
                 $this->primitiveBinaryLocation,
-                $inputPath,
-                $outputPath,
+                escapeshellarg($inputPath),
+                escapeshellarg($outputPath),
                 $this->mode,
                 $this->numberOfShapes
             )
