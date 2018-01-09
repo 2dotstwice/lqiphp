@@ -3,7 +3,16 @@
   "description": "",
   "type": "library",
   "license": "Apache-2.0",
-  "authors": [],
+  "authors": [
+    {
+      "name": "Bert Ramakers",
+      "email": "bert@2dotstwice.be"
+    },
+    {
+      "name": "Luc Wollants",
+      "email": "luc@2dotstwice.be"
+    }
+  ],
   "require": {
     "php": ">=7.1"
   },
