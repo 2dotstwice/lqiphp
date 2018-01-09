@@ -8,3 +8,4 @@ notifications:
   email:
     recipients:
       - bert@2dotstwice.be
+      - luc@2dotstwice.be
