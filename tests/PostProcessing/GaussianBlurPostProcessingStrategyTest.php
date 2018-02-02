@@ -37,4 +37,22 @@ class GaussianBlurPostProcessingStrategyTest extends TestCase
         $actual = $this->postProcessor->process($original);
         $this->assertEquals($expected, $actual);
     }
+
+    /**
+     * @test
+     */
+    public function it_should_return_the_injected_svg_string_as_is_if_the_configured_deviation_is_zero_or_lower()
+    {
+        $original = file_get_contents(__DIR__ . '/data/gaussian_blur/original_with_group.xml');
+        $expected = $original;
+
+        $postProcessorWithDeviationZero = new GaussianBlurPostProcessingStrategy(0, 'b');
+        $actualWithDeviationZero = $postProcessorWithDeviationZero->process($original);
+
+        $postProcessorWithNegativeDeviation = new GaussianBlurPostProcessingStrategy(-1, 'b');
+        $actualWithNegativeDeviation = $postProcessorWithNegativeDeviation->process($original);
+
+        $this->assertEquals($expected, $actualWithDeviationZero);
+        $this->assertEquals($expected, $actualWithNegativeDeviation);
+    }
 }
