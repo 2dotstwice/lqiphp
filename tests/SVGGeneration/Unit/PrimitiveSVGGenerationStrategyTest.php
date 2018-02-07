@@ -4,23 +4,28 @@ namespace TwoDotsTwice\LQIPHP\SVGGeneration;
 use PHPUnit\Framework\TestCase;
 use \TwoDotsTwice\LQIPHP\SVGGeneration\PrimitiveSVGGenerationStrategy as Strategy;
 
-function sys_get_temp_dir() {
+function sys_get_temp_dir() 
+{
     return '/test';
 }
 
-function exec() {
+function exec() 
+{
     return null;
 }
 
-function file_get_contents() {
+function file_get_contents() 
+{
     return 'test';
 }
 
-function unlink() {
+function unlink() 
+{
     return true;
 }
 
-function uniqid() {
+function uniqid() 
+{
     return '123';
 }
 
